@@ -1,3 +1,4 @@
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <div
     class="container-fluid"
     style="
@@ -15,7 +16,7 @@
                 <button
                     *ngIf="button === 'logout'"
                     type="button"
-                    style="margin-top:30px";
+                    style="margin-top:30px; border: 1px solid rgb(44, 44, 44);";
                     class="btn btn-danger"
                     (click)='onLogout()'
                 >
@@ -25,11 +26,11 @@
                 <button
                     *ngIf="button === 'view-cart'"
                     type="button"
-                    style="margin-top:30px;"
+                    style="margin-top:30px; border: 1px solid rgb(44, 44, 44);"
                     class="btn btn-light"
                     routerLink="/cart"
                 >
-                <i class="fas fa-shoppingcart" style="transform: rotateY(180deg) !important;" ></i>
+                <i class="fas fa-shopping-cart"></i>
                     view cart
                 </button>
             </div>
