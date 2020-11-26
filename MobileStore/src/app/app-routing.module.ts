@@ -12,7 +12,7 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'products',
+    path: 'products/:id',
     component: ProductComponent
   },
   {

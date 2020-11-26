@@ -16,10 +16,11 @@
                 <button
                     *ngIf="button === 'logout'"
                     type="button"
-                    style="margin-top:30px; border: 1px solid rgb(44, 44, 44);";
+                    style="margin-top:30px; border: 1px solid rgb(255, 241, 241);"
                     class="btn btn-danger"
-                    (click)='onLogout()'
+                    (click)="logout()"
                 >
+                    <i class="fas fa-sign-out-alt"></i>
                     logout
                 </button>
 
@@ -30,9 +31,20 @@
                     class="btn btn-light"
                     routerLink="/cart"
                 >
-                <i class="fas fa-shopping-cart"></i>
+                    <i class="fas fa-shopping-cart"></i>
                     view cart
                 </button>
+
+                <button
+                *ngIf="button === 'login'"
+                type="button"
+                style="margin-top:30px; border: 1px solid rgb(0, 163, 63);"
+                class="btn btn-success"
+                routerLink="/login"
+            >
+                <i class="fas fa-sign-in-alt"></i>
+                Login
+            </button>
             </div>
         </div>
     </div>
