@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {ListProductsService} from '../list-products/list-products.service';
 import { Product } from '../login/model';
 
@@ -10,7 +11,10 @@ import { Product } from '../login/model';
 export class ListProductsComponent implements OnInit {
   datas:Product[]=[];
 
-  constructor(private listProductService: ListProductsService) { }
+  constructor(
+    private listProductService: ListProductsService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.getAll();
@@ -19,7 +23,9 @@ export class ListProductsComponent implements OnInit {
   getAll(){
     this.listProductService.getAll().subscribe((res:any)=>{
       this.datas = res
+
     })
   }
+
 
 }

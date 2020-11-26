@@ -1,4 +1,4 @@
-<app-header title="Products" subtitle="All the available products in our store" button="view-cart"></app-header>
+<app-header title="Products" subtitle="All the available products in our store" button="login"></app-header>
 <div class="col-sm-9 padding-right" style="margin: 0 auto;">
     <div class="features_items"><!--features_items-->
         <div class="col-sm-4" *ngFor="let item of datas">
@@ -10,7 +10,12 @@
                             <p>Easy Polo Black Edition</p>
                             <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
-                        <div class="product-overlay">
+                        <div 
+                            class="product-overlay" 
+                            id ="1"
+                            style="cursor: pointer;"
+                            routerLink="/products/{{item._id}}"
+                        >
                             <div class="overlay-content">
                                 <h2>$56</h2>
                                 <p>Easy Polo Black Edition</p>

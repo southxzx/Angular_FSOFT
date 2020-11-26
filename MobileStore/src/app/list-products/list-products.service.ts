@@ -11,7 +11,7 @@ import { map } from 'rxjs/operators';
 export class ListProductsService {
     private allProductSubject: BehaviorSubject<Product>;
     public allProduct: Observable<Product>;
-    private urlAPI = 'https://utebookstore.herokuapp.com/books';
+    private urlAPI = 'http://localhost:8080/api/products';
 
     constructor(private http: HttpClient) {
         this.allProductSubject = new BehaviorSubject<Product>(
@@ -21,8 +21,6 @@ export class ListProductsService {
     }
 
     getAll():Observable<Product[]>{
-      console.log(this.http.get<Product[]>(this.urlAPI).pipe(
-        ))
       return this.http.get<Product[]>(this.urlAPI).pipe(
       )
       

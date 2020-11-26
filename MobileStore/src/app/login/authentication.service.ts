@@ -26,7 +26,7 @@ export class AuthenticationService {
     public login = (username: string, password: string) => {
         console.log(username);
         console.log(password);
-        const loginUrl = `${this.urlAPI}/api/v1/user/signin`;
+        const loginUrl = `${this.urlAPI}/api/users/login`;
         console.log(loginUrl);
         return this.http.post<any>(loginUrl, { username, password,})
             .pipe(

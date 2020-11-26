@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  public userName = 'nam';
-  public password = '123';
+  public userName = 'phu';
+  public password = 'phu';
 
   constructor(
     private authenticationService: AuthenticationService,
@@ -20,11 +20,11 @@ export class LoginComponent implements OnInit {
   login = () =>{
     this.authenticationService.login(this.userName, this.password).subscribe(
       (data) => {
-        if (data != null && data.username) {
+        if (data != null && data.name) {
           localStorage.setItem('username', data.username);
-          localStorage.setItem('password', data.password);
+          // localStorage.setItem('password', data.password);
           console.log('login Success');
-          // this.router.navigateByUrl('/productList');
+          this.router.navigateByUrl('/');
         } else{
           console.log('login fail');
         }
